@@ -26,8 +26,8 @@ namespace Anchor
         public MainWindow()
         {
 
-            InitializeComponent();
             this.DataContext = new MainViewModel();
+            InitializeComponent();
 
             ViewManager.Instance.Initialize();
         }

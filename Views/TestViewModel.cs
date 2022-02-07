@@ -7,13 +7,11 @@ using System.Threading.Tasks;
 
 namespace Anchor.Views
 {
-    internal class TestViewModel : IAnchorViewModel
+    internal class TestViewModel : AnchorViewModel
     {
-        public event PropertyChangedEventHandler? PropertyChanged;
 
         public void Load(object parms)
         {
-            throw new NotImplementedException();
         }
 
         public void Save()

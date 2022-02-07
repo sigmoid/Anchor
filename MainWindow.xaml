@@ -8,6 +8,31 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Label>Hello, world!</Label>
-        <Button Command="{Binding OpenTestWindowCommand}">Open Test Page</Button>
+        <DataGrid ItemsSource="{Binding DialogueProgression.Scenes}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Scene"
+                                    Binding="{Binding Path=Content}">
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Type"
+                                    Binding="{Binding Path=Type}">
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Color"
+                                    Binding="{Binding Path=Color}">
+                    <DataGridTextColumn.CellStyle>
+                        <Style TargetType="DataGridCell">
+                            <Setter Property="Background"
+                                    Value="{Binding Path=Color}"/>
+                        </Style>
+                    </DataGridTextColumn.CellStyle>
+                </DataGridTextColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Command="{Binding EditCommand}">Edit</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>

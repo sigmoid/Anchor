@@ -46,7 +46,7 @@ namespace Anchor.Managers
         { 
         }
 
-        public void ShowView(Window view, IAnchorViewModel viewModel, object? loadParms = null)
+        public void ShowView(Window view, AnchorViewModel viewModel, object? loadParms = null)
         {
 
             view.DataContext = viewModel;
