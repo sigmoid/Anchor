@@ -45,9 +45,9 @@ namespace Anchor.Model
         }
 
 
-        public void Edit()
+        public virtual void Edit()
         {
-            ViewManager.Instance.ShowView(new TestView(), new TestViewModel());
+            
         }
     }
 }

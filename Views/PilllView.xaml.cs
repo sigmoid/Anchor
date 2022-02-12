@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Anchor.Views
 {
     /// <summary>
-    /// Interaction logic for TestView.xaml
+    /// Interaction logic for PillView.xaml
     /// </summary>
-    public partial class TestView : Window
+    public partial class PillView : Window
     {
-        public TestView()
+        public PillView()
         {
             InitializeComponent();
         }

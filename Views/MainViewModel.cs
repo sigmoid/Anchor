@@ -52,7 +52,6 @@ namespace Anchor.Views
 
         private void EditScene(object sender)
         {
-            ViewManager.Instance.ShowView(new TestView(), new TestViewModel());
         }
     }
 }
