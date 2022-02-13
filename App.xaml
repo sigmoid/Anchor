@@ -4,6 +4,13 @@
              xmlns:local="clr-namespace:Anchor"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="TitleStyle">
+            <Setter Property="TextElement.FontFamily"
+                    Value="/Fonts/#Josefin Slab SemiBold"/>
+            <Setter Property="TextElement.Foreground"
+                    Value="White"/>
+            <Setter Property="TextElement.FontSize"
+                    Value="50"/>
+        </Style>
     </Application.Resources>
 </Application>

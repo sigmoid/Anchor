@@ -8,9 +8,13 @@
         Title="ConversationView" Height="450" Width="800">
     <StackPanel>
         <Label>Edit Conversation</Label>
-        <StackPanel Orientation="Horizontal">
+        <StackPanel Orientation="Horizontal" Width="750">
             <Label>Transition Text: </Label>
-            <TextBox Text="{Binding Scene.TransitionText, Mode=TwoWay}"/>
+            <TextBox Text="{Binding Scene.Content, Mode=TwoWay}" TextWrapping="Wrap" AcceptsReturn="True" Width="500" Height="80"/>
         </StackPanel>
+        <ScrollViewer>
+            <DataGrid ItemsSource="{Binding Scene.Prompts}">
+            </DataGrid>
+        </ScrollViewer>
     </StackPanel>
 </Window>

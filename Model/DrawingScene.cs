@@ -17,7 +17,7 @@ namespace Anchor.Model
         public DrawingScene()
         {
             EditCommand = new RelayCommand(() => Edit());
-            this.Type = DialogueSceneType.Title;
+            this.Type = DialogueSceneType.DrawingState;
         }
 
 

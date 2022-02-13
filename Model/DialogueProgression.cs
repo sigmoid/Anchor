@@ -20,10 +20,10 @@ namespace Anchor.Model
         {
             Scenes = new List<DialogueScene>()
             {
-                new ConversationScene() {Content = "Conversation1", Color = Brushes.Firebrick, Type = DialogueSceneType.Conversation  },
-                new PillScene() { Content = "TestPillState", Color = Brushes.Azure, Type = DialogueSceneType.PillState },
-                new DrawingScene() { Content = "TestDrawingState", Color = Brushes.Crimson, Type = DialogueSceneType.DrawingState },
-                new TitleScene() {Content = "Test Title!", Color = Brushes.Cyan, Type = DialogueSceneType.Title}
+                //new ConversationScene() {Content = "Conversation1", Color = Brushes.Firebrick, Type = DialogueSceneType.Conversation  },
+                //new PillScene() { Content = "TestPillState", Color = Brushes.Azure, Type = DialogueSceneType.PillState },
+                //new DrawingScene() { Content = "TestDrawingState", Color = Brushes.Crimson, Type = DialogueSceneType.DrawingState },
+                //new TitleScene() {Content = "Test Title!", Color = Brushes.Cyan, Type = DialogueSceneType.Title}
         }; 
         }
     }

@@ -17,9 +17,18 @@ namespace Anchor.Model
         public PillScene()
         {
             EditCommand = new RelayCommand(() => Edit());
-            this.Type = DialogueSceneType.Title;
+            this.Type = DialogueSceneType.PillState;
         }
 
+        #region Properties
+
+        public int NumPills
+        {
+            get;
+            set;
+        }
+
+        #endregion
 
         public override void Edit()
         {

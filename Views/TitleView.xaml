@@ -5,11 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Anchor.Views"
         mc:Ignorable="d"
-        Title="TitleView" Height="450" Width="800">
+        Title="Edit Title" Height="700" Width="960">
+    <Window.Resources>
+    </Window.Resources>
     <Grid>
         <StackPanel>
             <Label>Edit Title</Label>
-            <TextBox Text="{Binding Scene.Content, Mode=TwoWay}"/>
+            <TextBox Text="{Binding Scene.Content, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap"  AcceptsReturn="true" VerticalScrollBarVisibility="Visible" Width="700" Height="110" HorizontalAlignment="Left"/>
+            <Border Background="{Binding Scene.Color}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="540"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="810"/>
+                        <ColumnDefinition Width="75"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource TitleStyle}"  HorizontalAlignment="Left" VerticalAlignment="Center" Content="{Binding Scene.Content}"/>
+                </Grid>
+            </Border>
         </StackPanel>
     </Grid>
 </Window>

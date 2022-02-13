@@ -9,6 +9,8 @@ using Anchor.Managers;
 using Anchor.Util;
 using Anchor.Model;
 using CommunityToolkit.Mvvm.Input;
+using System.Windows;
+using Microsoft.Win32;
 
 namespace Anchor.Views
 {
@@ -16,6 +18,7 @@ namespace Anchor.Views
     {
         #region Properties
 
+        public RelayCommand SaveAsCommand { get; set; }
         public RelayCommand<object> EditSceneCommand { get; set; }
 
         private DialogueProgression _dialogueProgression;
@@ -36,22 +39,29 @@ namespace Anchor.Views
         public MainViewModel()
         {
             EditSceneCommand = new RelayCommand<object>((sender) => EditScene(sender));
+            SaveAsCommand = new RelayCommand(() => Save());
 
             Load(null);
         }
 
         public void Load(object parms)
         {
-            DialogueProgression = new DialogueProgression();
+            DialogueProgression = SerializationManager.LoadProgression("C:\\Dev\\Tools\\Anchor\\Dialogue\\DialogueProgression.xml");
         }
 
         public void Save()
         {
-            throw new NotImplementedException();
+            SaveFileDialog dialog = new SaveFileDialog();
+
+            if (dialog.ShowDialog() == true)
+            {
+                SerializationManager.SaveDialogueProgression(dialog.FileName, _dialogueProgression);
+            }
         }
 
         private void EditScene(object sender)
         {
+
         }
     }
 }
